@@ -1,5 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
 
+import "./Expenses.css";
+
+//  simplified using given val, key with .map object
 const AppRenderExp = (props) => {
 	const expenses = props.expenses.map((val, key) => {
 		return (
