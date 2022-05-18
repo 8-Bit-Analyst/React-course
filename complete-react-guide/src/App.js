@@ -30,7 +30,7 @@ function App() {
 	];
 	return (
 		<div>
-			<h2>Look What Beeko Did Today :3</h2>
+			<h2 className="end">End my Suffering</h2>
 			<NewExpense />
 			<AppRenderExp expenses={expenses} />
 		</div>
