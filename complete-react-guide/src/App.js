@@ -1,4 +1,5 @@
 import AppRenderExp from "./components/Expenses/AppRenderExp";
+import NewExpense from "./components/Expenses/NewExpense/NewExpense";
 
 function App() {
 	const expenses = [
@@ -30,6 +31,7 @@ function App() {
 	return (
 		<div>
 			<h2>Look What Beeko Did Today :3</h2>
+			<NewExpense />
 			<AppRenderExp expenses={expenses} />
 		</div>
 	);
