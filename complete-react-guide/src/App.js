@@ -1,4 +1,4 @@
-import AppRenderExp from "./components/AppRenderExp";
+import AppRenderExp from "./components/Expenses/AppRenderExp";
 
 function App() {
 	const expenses = [
