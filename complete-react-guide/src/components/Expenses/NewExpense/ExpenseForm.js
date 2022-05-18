@@ -26,12 +26,11 @@ const ExpenseForm = () => {
 			amount: enteredAmount,
 			date: new Date(enteredDate),
 		};
-
 		console.log(expenseData);
 	};
 
 	return (
-		<form>
+		<form onSubmit={submitHandler}>
 			<div className="new-expense__controls">
 				<div className="new-expense__control">
 					<label>Title</label>
@@ -57,9 +56,7 @@ const ExpenseForm = () => {
 				</div>
 			</div>
 			<div className="new-expense__actions">
-				<button type="submit" onSubmit={submitHandler}>
-					Add Expense
-				</button>
+				<button type="submit">Add Expense</button>
 			</div>
 		</form>
 	);
