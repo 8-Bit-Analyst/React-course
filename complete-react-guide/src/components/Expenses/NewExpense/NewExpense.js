@@ -1,6 +1,7 @@
 import React from "react";
 import ExpenseForm from "./ExpenseForm";
 
+// allows to lift up ExpenseForm data
 const NewExpense = (props) => {
 	const saveExpenseDataHandler = (enteredExpenseData) => {
 		const expenseData = {
@@ -9,7 +10,7 @@ const NewExpense = (props) => {
 		};
 		props.onAddExpense(expenseData);
 	};
-
+	// renders ExpenseForm style to page
 	return (
 		<div className="new-expense">
 			<ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./NewExpense.css";
 
+// accesses form data changed with state
 const ExpenseForm = (props) => {
 	const [enteredTitle, setEnteredTitle] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 	const [enteredDate, setEnteredDate] = useState("");
 
+	// !concatanate changeHandler events into one!
 	const titleChangeHandler = (event) => {
 		setEnteredTitle(event.target.value);
 	};
@@ -18,6 +20,7 @@ const ExpenseForm = (props) => {
 		setEnteredDate(event.target.value);
 	};
 
+	// handles form event submission and data transfer
 	const submitHandler = (event) => {
 		event.preventDefault();
 
@@ -26,6 +29,8 @@ const ExpenseForm = (props) => {
 			amount: enteredAmount,
 			date: new Date(enteredDate),
 		};
+
+		// argument for function in NewExpense component for lifting
 		props.onSaveExpenseData(expenseData);
 		setEnteredTitle("");
 		setEnteredAmount("");
@@ -33,6 +38,7 @@ const ExpenseForm = (props) => {
 	};
 
 	return (
+		// submitHandler prop also prevents page from reloading on state change
 		<form onSubmit={submitHandler}>
 			<div className="new-expense__controls">
 				<div className="new-expense__control">
